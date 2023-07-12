@@ -1,5 +1,5 @@
 const express = require('express');
-const { faker } = require('@faker-js/faker');
+const { faker, fakerPT_BR } = require('@faker-js/faker');
 
 const app = express();
 
@@ -16,43 +16,43 @@ app.get("/resume", function (request, response) {
           month: "Junho",
           rank: [
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: faker.location.city(),
+                  name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               }
           ]
@@ -65,43 +65,43 @@ app.get("/resume", function (request, response) {
         month: "Julho",
         rank: [
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             },
             {
-                name: faker.location.city(),
+                name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             }
         ]
