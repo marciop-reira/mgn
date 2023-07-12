@@ -1,8 +1,10 @@
 const express = require('express');
 const { faker, fakerPT_BR } = require('@faker-js/faker');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 
 app.get("/resume", function (request, response) {
