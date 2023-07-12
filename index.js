@@ -1,6 +1,7 @@
 const express = require('express');
 const { faker, fakerPT_BR } = require('@faker-js/faker');
 const cors = require('cors');
+const { clientsPerDay } = require('./faker-graphic');
 
 const app = express();
 
@@ -57,7 +58,8 @@ app.get("/resume", function (request, response) {
                   name: fakerPT_BR.location.city(),
                   amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               }
-          ]
+          ],
+          graphic: clientsPerDay(30)
       },
       {
         total_clients: faker.number.int({min: 50, max: 1000}),
@@ -106,7 +108,8 @@ app.get("/resume", function (request, response) {
                 name: fakerPT_BR.location.city(),
                 amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
             }
-        ]
+        ],
+        graphic: clientsPerDay(30)
     }
     ]
   );
