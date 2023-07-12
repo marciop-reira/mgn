@@ -1,5 +1,5 @@
 const express = require('express');
-const { v4: uuidv4 } = require('uuid');
+const { faker } = require('@faker-js/faker');
 
 const app = express();
 
@@ -9,103 +9,103 @@ app.get("/resume", function (request, response) {
   return response.status(200).send(
     [
       {
-          total_clients: "(fakeRandomNumber:4)",
-          total_cities: "(fakeRandomNumber:3)",
-          total_signatures: "(fakeRandomNumber:5)",
-          total_partner_stores: "(fakeRandomNumber:2)",
+          total_clients: faker.number.int({min: 50, max: 1000}),
+          total_cities: faker.number.int({min: 50, max: 150}),
+          total_signatures: faker.number.int({min: 50, max: 10000}),
+          total_partner_stores: faker.number.int({min: 50, max: 90}),
           month: "Junho",
           rank: [
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               },
               {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
+                  name: faker.location.city(),
+                  amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
               }
           ]
       },
       {
-          total_clients: "(fakeRandomNumber:4)",
-          total_cities: "(fakeRandomNumber:3)",
-          total_signatures: "(fakeRandomNumber:5)",
-          total_partner_stores: "(fakeRandomNumber:2)",
-          month: "Julho",
-          rank: [
-              {
-                  name: "(fakeCity:pt_BR) Chapel",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR) Britain",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR) Vernon",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR) Green",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              },
-              {
-                  name: "(fakeCity:pt_BR)",
-                  amount: "(fakeRandomFloat:2:1000:10000)"
-              }
-          ]
-      }
+        total_clients: faker.number.int({min: 50, max: 1000}),
+        total_cities: faker.number.int({min: 50, max: 150}),
+        total_signatures: faker.number.int({min: 50, max: 10000}),
+        total_partner_stores: faker.number.int({min: 50, max: 90}),
+        month: "Julho",
+        rank: [
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            },
+            {
+                name: faker.location.city(),
+                amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
+            }
+        ]
+    }
     ]
   );
 });
