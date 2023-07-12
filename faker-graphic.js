@@ -1,6 +1,6 @@
 const { faker } = require("@faker-js/faker");
 
-export function clientsPerDay(count) {
+function clientsPerDay(count) {
   const data = [];
   
   for (var i = 0; i < count; i++) {
@@ -9,3 +9,5 @@ export function clientsPerDay(count) {
 
   return data;
 }
+
+module.exports = { clientsPerDay }
