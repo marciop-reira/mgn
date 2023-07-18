@@ -50,7 +50,13 @@ const RESUME = [
             amount: faker.number.float({min: 1000, max: 10000, precision:0.01})
         }
     ],
-    graphic: clientsPerDay(30)
+    graphic: clientsPerDay(30),
+    previous_month_comparison: {
+        total_clients: faker.number.float({min: -2, max: 2, precision: 0.0001}),
+        total_cities: faker.number.float({min: -2, max: 2, precision: 0.0001}),
+        total_signatures: faker.number.float({min: -2, max: 2, precision: 0.0001}),
+        total_partner_stores: faker.number.float({min: -2, max: 2, precision: 0.0001}),
+    }
   },
   {
     total_clients: faker.number.int({min: 50, max: 1000}),
