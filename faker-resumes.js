@@ -1,6 +1,7 @@
 const { faker } = require("@faker-js/faker");
 const { rank } = require("./faker-city-rank");
 const { graphic } = require("./faker-graphic");
+const { comparison } = require("./faker-comparison");
 
 function resumes(count) {
   const data = [];
@@ -15,10 +16,10 @@ function resumes(count) {
       rank: rank(10),
       graphic: graphic(30),
       previous_month_comparison: {
-        total_clients: faker.number.float({min: -2, max: 2, precision: 0.0001}),
-        total_cities: faker.number.float({min: -2, max: 2, precision: 0.0001}),
-        total_signatures: faker.number.float({min: -2, max: 2, precision: 0.0001}),
-        total_partner_stores: faker.number.float({min: -2, max: 2, precision: 0.0001}),
+        total_clients: comparison(0, 2),
+        total_cities: comparison(0, 2),
+        total_signatures: comparison(0, 2),
+        total_partner_stores: comparison(0, 2),
       }
     });
   }
